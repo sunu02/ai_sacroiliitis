@@ -1,19 +1,4 @@
 #!/bin/bash
-# Copyright 2017 The TensorFlow Authors. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ==============================================================================
-
 # This script prepares the various different versions of MobileNet models for
 # use in a mobile application. If you don't specify your own trained checkpoint
 # file, it will download pretrained checkpoints for ImageNet. You'll also need
@@ -27,7 +12,7 @@
 # of the model, and the input image size, which can be 224, 192, 160, or 128
 # pixels, and affects the amount of computation needed, and the latency.
 # Here's an example generating a frozen model from pretrained weights:
-#
+# 
 
 set -e
 
@@ -35,7 +20,7 @@ print_usage () {
   echo "Creates a frozen mobilenet model suitable for mobile use"
   echo "Usage:"
   echo "$0 <mobilenet version> <input size> [checkpoint path]"
-}
+} 
 
 MOBILENET_VERSION=$1
 IMAGE_SIZE=$2

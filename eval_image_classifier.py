@@ -182,10 +182,11 @@ def main(_):
         master=FLAGS.master,
         checkpoint_path=checkpoint_path,
         logdir=FLAGS.eval_dir,
-        num_evals=num_batches,
-        eval_op=list(names_to_updates.values()),
+        num_evals=num_batches,        
+        eval_op = tf.Print(list(names_to_updates.values()), [labels, predictions], message="labels/predicts:", summarize=100),
+        #eval_op=list(names_to_updates.values()),
         variables_to_restore=variables_to_restore)
-
+    
 
 if __name__ == '__main__':
   tf.app.run()
